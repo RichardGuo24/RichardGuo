@@ -1,17 +1,18 @@
+.header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
 body {
-    border: solid;
-    border-color: red;
-    padding: 10px;
-    margin: 5px;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
 }
 
-html {
-    border: solid;
-    border-color: green;
-    border-width: 10px;
-
-}
-
-h1 {
-    color: blue
+.content {
+    max-width: 625px;
 }

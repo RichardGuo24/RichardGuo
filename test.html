@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f5f5f5;
+        }
+
+        svg {
+            width: 50%;
+            height: auto;
+        }
+
+        path {
+            stroke: black;
+            stroke-width: 2;
+            fill: none;
+            stroke-dasharray: 400;
+            /* Adjust based on path length */
+            stroke-dashoffset: 400;
+            /* Same as dasharray to hide the line initially */
+            animation: draw 3s ease-out forwards;
+        }
+
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+                /* Draw the path by reducing the offset */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+        <!-- Example: A handwritten name -->
+        <path d="M50 150 C70 100, 150 100, 200 150 C250 200, 320 50, 400 150" />
+    </svg>
+</body>
+
+</html>
