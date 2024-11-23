@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drawing Animation</title>
+    <title>Face Drawing Animation with Glasses</title>
     <style>
         body {
             display: flex;
@@ -19,30 +19,51 @@
             height: auto;
         }
 
-        path {
+        path,
+        circle,
+        line {
             stroke: black;
             stroke-width: 2;
             fill: none;
             stroke-dasharray: 400;
-            /* Adjust based on path length */
             stroke-dashoffset: 400;
-            /* Same as dasharray to hide the line initially */
             animation: draw 3s ease-out forwards;
+        }
+
+        circle {
+            animation-duration: 6s;
         }
 
         @keyframes draw {
             to {
                 stroke-dashoffset: 0;
-                /* Draw the path by reducing the offset */
             }
         }
     </style>
 </head>
 
 <body>
-    <svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
-        <!-- Example: A handwritten name -->
-        <path d="M50 150 C70 100, 150 100, 200 150 C250 200, 320 50, 400 150" />
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <!-- Face outline -->
+        <circle cx="100" cy="100" r="80" />
+        <!-- Left eye -->
+        <path d="M70 80 C75 75, 85 75, 90 80" />
+        <!-- Right eye -->
+        <path d="M110 80 C115 75, 125 75, 130 80" />
+        <!-- Nose -->
+        <path d="M100 85 Q95 100, 100 115" />
+        <!-- Mouth -->
+        <path d="M80 130 C90 150, 110 150, 120 130" />
+        <!-- Glasses: Left lens -->
+        <circle cx="80" cy="80" r="15" />
+        <!-- Glasses: Right lens -->
+        <circle cx="120" cy="80" r="15" />
+        <!-- Glasses: Bridge -->
+        <line x1="95" y1="80" x2="105" y2="80" />
+        <!-- Glasses: Left arm -->
+        <line x1="65" y1="80" x2="50" y2="75" />
+        <!-- Glasses: Right arm -->
+        <line x1="135" y1="80" x2="150" y2="75" />
     </svg>
 </body>
 

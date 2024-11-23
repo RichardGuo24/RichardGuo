@@ -1,7 +1,25 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
 .header {
     position: absolute;
     top: 20px;
     right: 20px;
+}
+
+.button-top-right {
+    width: 70px;
+    height: 40px;
+    margin-left: 10px;
+    background-color: white;
+    border-style: hidden;
+    font-size: 15px;
+}
+
+.button-top-right:hover {
+    background-color: lightgray;
+    transition: 1500ms;
 }
 
 body {
@@ -10,8 +28,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Arial, sans-serif;
 }
+
+
 
 .content {
     max-width: 625px;
