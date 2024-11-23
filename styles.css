@@ -1,20 +1,22 @@
 * {
     font-family: Arial, sans-serif;
+    color: black;
 }
 
 .header {
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 20px;
 }
 
 .button-top-right {
-    width: 70px;
-    height: 40px;
-    margin-left: 10px;
+    text-decoration: none;
+    padding: 20px 10px;
+    margin-left: 5px;
+    display: inline-block;
     background-color: white;
     border-style: hidden;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .button-top-right:hover {
@@ -34,4 +36,5 @@ body {
 
 .content {
     max-width: 625px;
+    font-size: 17px;
 }
