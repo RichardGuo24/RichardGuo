@@ -3,6 +3,14 @@
     color: black;
 }
 
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .header {
     position: absolute;
     top: 10px;
@@ -24,17 +32,16 @@
     transition: 1500ms;
 }
 
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
 .content {
     max-width: 625px;
     font-size: 17px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.project-container {
+    border: solid blue;
 }
